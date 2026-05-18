@@ -1,0 +1,23 @@
+footer {
+    background-color: #1e1f26; /* El mismo gris oscuro de tus forms */
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 60px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer p {
+    color: #94a3b8; /* Gris azulado suave */
+    font-size: 0.9rem;
+    margin: 0;
+    letter-spacing: 0.5px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Un detalle pro: que el nombre de la tienda resalte un poco */
+footer p b {
+    color: #3b82f6; /* Tu azul de acento */
+    font-weight: 600;
+}

@@ -1,0 +1,120 @@
+:root {
+    --bg-color: #13141a;
+    --card-bg: #1e1f26;
+    --accent-color: #3b82f6; /* Azul moderno */
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.titulo-seccion {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 15px;
+    text-transform: capitalize;
+}
+
+/* Grid de Productos */
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* Estilo de la Card */
+.card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+    border-color: var(--accent-color);
+}
+
+/* Imagen del Producto */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido de la Card */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+}
+
+.categoria {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.precio {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #10b981; /* Verde esmeralda para el precio */
+    margin-bottom: 20px;
+}
+
+/* Botón Comprar */
+.btn-comprar {
+    display: block;
+    text-align: center;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-comprar:hover {
+    background-color: #2563eb;
+}
+
+/* Link invisible que cubre toda la card (opcional) */
+.card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Para que el botón de comprar funcione sobre el link invisible */
+.btn-comprar {
+    position: relative;
+    z-index: 2;
+}
